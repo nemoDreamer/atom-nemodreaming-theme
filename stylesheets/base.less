@@ -48,9 +48,12 @@
   background-color: @syntax-selection-color;
 }
 
-.editor.is-focused .line-number.cursor-line-no-selection,
-.editor.is-focused .line.cursor-line {
+.editor.is-focused .line-number.cursor-line-no-selection {
   background-color: #000;
+}
+
+.editor.is-focused .line.cursor-line {
+  // background-color: #000;
 }
 
 .comment, .comment.block.html .invalid {
@@ -108,7 +111,6 @@
 
 .entity {
   color: #66C;
-  background-color: rgba(102, 102, 204, 0.07);
 }
 
 .entity.name.tag, .source.sass .keyword.control.untitled {
@@ -118,7 +120,6 @@
 
 .entity.other {
   color: #99F;
-  background-color: #EEE;
 }
 
 .source.diff, .markup.inserted.diff, .markup.deleted.diff, .meta.diff.header.to-file, .meta.diff.header.from-file {
