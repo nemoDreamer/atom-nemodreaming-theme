@@ -5,12 +5,13 @@
 @syntax-text-color: #666;
 @syntax-cursor-color: #000;
 @syntax-selection-color: #FC3;
+@syntax-selection-flash-color: #FFE699;
 @syntax-background-color: #EEE;
 
 // Guide colors
-@syntax-wrap-guide-color: #CCC;
-@syntax-indent-guide-color: #CCC;
-@syntax-invisible-character-color: #CCC;
+@syntax-wrap-guide-color: #E8E8E8;
+@syntax-indent-guide-color: #E8E8E8;
+@syntax-invisible-character-color: #E8E8E8;
 
 // For find and replace markers
 @syntax-result-marker-color: #CCC;
@@ -18,7 +19,7 @@
 
 // Gutter colors
 @syntax-gutter-text-color: #666;
-@syntax-gutter-text-color-selected: #666;
+@syntax-gutter-text-color-selected: #FFF;
 @syntax-gutter-background-color: #EEE;
 @syntax-gutter-background-color-selected: #000;
 
@@ -28,3 +29,18 @@
 @syntax-color-added: #A8FF60;
 @syntax-color-modified: #E9C062;
 @syntax-color-removed: #CC6666;
+
+// For language entity colors
+@syntax-color-variable: #66C;
+@syntax-color-constant: @syntax-color-variable;
+/* TODO: use these in index.less */
+@syntax-color-property: #EDEDED;
+@syntax-color-value: #F9EE98;
+@syntax-color-function: #DAD085;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: #62B1FE;
+@syntax-color-keyword: #96CBFE;
+@syntax-color-tag: #96CBFE;
+@syntax-color-attribute: #C6C5FE;
+@syntax-color-import: @syntax-color-keyword;
+@syntax-color-snippet: @syntax-color-constant;
