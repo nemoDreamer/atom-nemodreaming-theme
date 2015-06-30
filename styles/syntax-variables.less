@@ -9,18 +9,18 @@
 @syntax-background-color: #EEE;
 
 // Guide colors
-@syntax-wrap-guide-color: #E8E8E8;
-@syntax-indent-guide-color: #E8E8E8;
-@syntax-invisible-character-color: #E8E8E8;
+@syntax-wrap-guide-color: darken(@syntax-background-color, 5%);
+@syntax-indent-guide-color: darken(@syntax-background-color, 5%);
+@syntax-invisible-character-color: darken(@syntax-background-color, 5%);
 
 // For find and replace markers
-@syntax-result-marker-color: #CCC;
+@syntax-result-marker-color: darken(@syntax-gutter-background-color, 25%);
 @syntax-result-marker-color-selected: #666;
 
 // Gutter colors
-@syntax-gutter-text-color: #666;
+@syntax-gutter-text-color: @syntax-text-color;
+@syntax-gutter-background-color: @syntax-background-color;
 @syntax-gutter-text-color-selected: #FFF;
-@syntax-gutter-background-color: #EEE;
 @syntax-gutter-background-color-selected: #000;
 
 // For git diff info. i.e. in the gutter
@@ -40,7 +40,7 @@
 @syntax-color-method: @syntax-color-function;
 @syntax-color-class: #62B1FE;
 @syntax-color-keyword: #96CBFE;
-@syntax-color-tag: #96CBFE;
+@syntax-color-tag: @syntax-color-keyword;
 @syntax-color-attribute: #C6C5FE;
 @syntax-color-import: @syntax-color-keyword;
 @syntax-color-snippet: @syntax-color-constant;

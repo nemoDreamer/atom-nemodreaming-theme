@@ -54,19 +54,29 @@ atom-text-editor::shadow {
   }
 
   .cursor {
-    border-color: @syntax-cursor-color;
+    border: none;
+    border-bottom: 2px solid fadeout(@syntax-cursor-color, 50%);
+    background-color: fadeout(@syntax-cursor-color, 95%);
   }
 
   .selection .region {
-    background-color: @syntax-selection-color;
+    background-color: fadeout(@syntax-selection-color, 75%);
   }
 
   .line-number.cursor-line-no-selection {
-    background-color: #000;
+    background-color: fadeout(@syntax-cursor-color, 75%);
   }
 
-  .line.cursor-line {
-    /* background-color: #000; */
+  &.is-focused,
+  &.is-focused::shadow {
+    
+    .selection .region {
+      background-color: @syntax-selection-color;
+    }
+
+    .line.cursor-line {
+      background-color: fadeout(@syntax-cursor-color, 97.5%);
+    }
   }
 }
 
@@ -76,8 +86,12 @@ atom-text-editor::shadow {
 
 .comment,
 .comment.block.html .invalid {
-  color: #AAA;
-  background-color: #E0E0E0;
+  color: lighten(@syntax-text-color, 25%);
+  background-color: fadeout(@syntax-text-color, 90%);
+}
+
+.comment .comment {
+    background-color: transparent;
 }
 
 .keyword,
@@ -138,7 +152,7 @@ atom-text-editor::shadow {
 .entity.name.tag,
 .source.sass .keyword.control.untitled {
   color: @syntax-color-variable;
-  background-color: rgba(102, 102, 204, 0.07);
+  background-color: fadeout(@syntax-color-variable, .1);
 }
 
 .entity.other {
