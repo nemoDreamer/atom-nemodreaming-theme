@@ -80,7 +80,7 @@ atom-text-editor::shadow {
   }
 
   atom-text-editor-minimap {
-    background: fadeout(darken(@syntax-background-color, 15%), 75%);
+    background: fadeout(darken(@syntax-background-color, 5%), 25%);
   }
 
 }
@@ -95,8 +95,9 @@ atom-text-editor::shadow {
   background-color: fadeout(@syntax-text-color, 90%);
 }
 
-.comment .comment {
-    background-color: transparent;
+.comment.punctuation,
+.comment .leading-whitespace {
+  background-color: transparent;
 }
 
 .keyword,
