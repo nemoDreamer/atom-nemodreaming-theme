@@ -1,7 +1,7 @@
 {
   "name": "nemodreaming-theme",
   "theme": "syntax",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A light theme, strongly featuring strings & comments.",
   "repository": "https://github.com/nemodreamer/atom-nemodreaming-theme",
   "license": "MIT",
