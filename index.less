@@ -2,9 +2,8 @@
 
 /* @group Editor */
 
-:host,
 atom-text-editor,
-atom-text-editor::shadow {
+atom-text-editor.editor {
 
   background-color: @syntax-background-color;
   color: @syntax-text-color;
@@ -14,7 +13,6 @@ atom-text-editor::shadow {
     color: @syntax-gutter-text-color;
 
     .line-number {
-
       &.cursor-line {
         background-color: @syntax-gutter-background-color-selected;
         color: @syntax-gutter-text-color-selected;
@@ -39,9 +37,7 @@ atom-text-editor::shadow {
   }
 
   .search-results {
-
-    .marker {
-
+    .syntax--marker {
       .region {
         background-color: transparent;
         border: @syntax-result-marker-color;
@@ -68,8 +64,7 @@ atom-text-editor::shadow {
   }
 
   &.is-focused,
-  &.is-focused::shadow {
-    
+  &.is-focused.editor {
     .selection .region {
       background-color: @syntax-selection-color;
     }
@@ -90,138 +85,138 @@ atom-text-editor::shadow {
 /* @group Syntax */
 
 .comment,
-.comment.block.html .invalid {
+.syntax--comment.syntax--block.syntax--html .syntax--invalid {
   color: lighten(@syntax-text-color, 25%);
   background-color: fadeout(@syntax-text-color, 90%);
 }
 
-.comment.punctuation,
-.comment .leading-whitespace {
+.syntax--comment.syntax--punctuation,
+.syntax--comment .leading-whitespace {
   background-color: transparent;
 }
 
-.keyword,
-.storage {
+.syntax--keyword,
+.syntax--storage {
   color: #F33;
 }
 
-.keyword.operator {
+.syntax--keyword.syntax--operator {
   color: #990;
 }
 
-.punctuation.separator {
+.syntax--punctuation.syntax--separator {
   color: #99C;
 }
 
-.variable {
+.syntax--variable {
   color: #336;
 }
 
-.constant,
-.support {
+.syntax--constant,
+.syntax--support {
   color: @syntax-color-constant;
 }
 
-.constant.numeric {
+.syntax--constant.syntax--numeric {
   color: #C60;
 }
 
-.punctuation.definition.constant {
+.syntax--punctuation.syntax--definition.syntax--constant {
   color: #CCF;
 }
 
-.string {
+.syntax--string {
   font-style: italic;
   color: #996;
   background-color: rgba(255, 255, 0, 0.07);
 
-  .variable,
-  .source {
+  .syntax--variable,
+  .syntax--source {
     color: #663;
   }
 }
 
-.invalid {
+.syntax--invalid {
   color: #F00;
   background-color: #900;
 
-  &.deprecated {
+  &.syntax--deprecated {
     color: #CDCDCD;
     background-color: #CC99CC;
   }
 }
 
-.entity {
+.syntax--entity {
   color: @syntax-color-variable;
 }
 
-.entity.name.tag,
-.source.sass .keyword.control.untitled {
+.syntax--entity.syntax--name.syntax--tag,
+.syntax--source.syntax--sass .syntax--keyword.syntax--control.syntax--untitled {
   color: @syntax-color-variable;
   background-color: fadeout(@syntax-color-variable, 90%);
 }
 
-.entity.other {
+.syntax--entity.syntax--other {
   color: #99F;
 }
 
 /* @group DIFF */
 
-.source.diff,
-.markup.inserted.diff,
-.markup.deleted.diff,
-.meta.diff.header.to-file,
-.meta.diff.header.from-file {
+.syntax--source.syntax--diff,
+.syntax--markup.syntax--inserted.syntax--diff,
+.syntax--markup.syntax--deleted.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header.syntax--to-file,
+.syntax--meta.syntax--diff.syntax--header.syntax--from-file {
 }
 
-.markup.inserted.diff,
-.meta.diff.header.to-file {
+.syntax--markup.syntax--inserted.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header.syntax--to-file {
   color: #090;
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-.markup.deleted.diff,
-.meta.diff.header.from-file {
+.syntax--markup.syntax--deleted.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header.syntax--from-file {
   color: #900;
   background-color: rgba(255, 0, 0, 0.2);
 }
 
-.meta.diff.header.from-file,
-.meta.diff.header.to-file {
+.syntax--meta.syntax--diff.syntax--header.syntax--from-file,
+.syntax--meta.syntax--diff.syntax--header.syntax--to-file {
   color: @syntax-color-variable;
 }
 
-.meta.diff.range {
+.syntax--meta.syntax--diff.syntax--range {
   font-style: italic;
   color: rgba(153, 153, 255, 0.6);
 }
 
 /* @end */
 
-.text.html.markdown {
+.text.syntax--html.markdown {
 }
 
-.markup {
+.syntax--markup {
 
-  &.heading {
+  &.syntax--heading {
     color: #996;
     background-color: rgba(255, 255, 0, 0.07);
 
-    .entity.name {
+    .syntax--entity.syntax--name {
       color: #663;
       background-color: rgba(255, 255, 0, 0.2);
     }
   }
 
-  &.list {
+  &.syntax--list {
     color: #6c96b6;
   }
 
-  &.italic {
+  &.syntax--italic {
     font-style: italic;
   }
 
-  &.bold {
+  &.syntax--bold {
     font-weight: bold;
   }
 }
